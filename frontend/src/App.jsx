@@ -1,15 +1,16 @@
 import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
 import NotesApp from './components/NoteApp'
-
 
 const App = () => {
   return (
-    <div>
-      
-
-      <NotesApp />
-      
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/notes" element={<NotesApp />} />
+      </Routes>
+    </Router>
   )
 }
 
